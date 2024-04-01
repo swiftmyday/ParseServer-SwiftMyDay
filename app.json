@@ -2,7 +2,7 @@
   "name": "SwiftMyDay Parse Server",
   "description": "Parse server SwiftMyDay Version",
   "repository": "https://github.com/swiftmyday/ParseServer-SwiftMyDay",
-  "logo": "https://avatars.githubusercontent.com/u/158538160?v=4",
+  "logo": "https://swiftmyday.github.io/Deposit/Logo.png",
   "env": {
     "PARSE_MOUNT": {
       "description": "Configure Parse API route. (Do not change this value)",
@@ -19,7 +19,7 @@
       "required": true
     },
     "SERVER_URL": {
-      "description": "Your server URL. Just replace yourappname with the name typed above in app-name",
+      "description": "Replace yourappname with the name typed above in app-name",
       "value": "http://yourappname.herokuapp.com/parse",
       "required": true
     },
