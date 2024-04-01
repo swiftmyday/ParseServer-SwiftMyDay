@@ -28,13 +28,16 @@
       "required": true
     },
     "AWS_ACCESS_KEY_ID": {
-      "description": "Your AWS access key"
+      "description": "Your AWS access key for S3 bucket access",
+      "required": false
     },
     "AWS_SECRET_ACCESS_KEY": {
-      "description": "Your AWS secret access key"
+      "description": "Your AWS secret access key S3 bucket access",
+      "required": false
     },
     "BUCKET_NAME": {
-      "description": "Your S3 bucket name"
+      "description": "Your S3 bucket name (This is required if AWS keys were provided)",
+      "required": false
     }
   },
   "engines": {
