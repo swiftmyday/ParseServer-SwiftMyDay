@@ -1,27 +1,45 @@
 {
-  "name": "Parse Server Example",
-  "description": "An example Parse API server using the parse-server module",
-  "repository": "https://github.com/ParsePlatform/parse-server-example",
-  "logo": "https://avatars0.githubusercontent.com/u/1294580?v=3&s=200",
-  "keywords": ["node", "express", "parse"],
+  "name": "SwiftMyDay Parse Server",
+  "description": "Parse server SwiftMyDay Version",
+  "repository": "https://github.com/swiftmyday/ParseServer-SwiftMyDay",
+  "logo": "https://avatars.githubusercontent.com/u/158538160?v=4",
   "env": {
     "PARSE_MOUNT": {
-      "description": "Configure Parse API route.",
+      "description": "Configure Parse API route. (Do not change this value)",
       "value": "/parse"
     },
     "APP_ID": {
       "description": "A unique identifier for your app.",
-      "value": "myAppId"
+      "generator": "secret",
+      "required": true
     },
     "MASTER_KEY": {
       "description": "A key that overrides all permissions. Keep this secret.",
-      "value": "myMasterKey"
+      "generator": "secret",
+      "required": true
     },
     "SERVER_URL": {
-      "description": "URL to connect to your Heroku instance (update with your app's name + PARSE_MOUNT)",
-      "value": "http://yourappname.herokuapp.com/parse"
+      "description": "Your server URL. Just replace yourappname with the name of this server.",
+      "value": "http://yourappname.herokuapp.com/parse",
+      "required": true
+    },
+    "DATABASE_URI": {
+      "description": "Your MongoDB database URI",
+      "required": true
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "description": "Your MongoDB database URI",
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "description": "Your MongoDB database URI",
+      "required": true
     }
   },
-  "image": "heroku/nodejs",
-  "addons": ["mongolab"]
+  "engines": {
+    "node": ">=18.0.0"
+    },
+    "image": "heroku/nodejs"
 }
+
+

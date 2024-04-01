@@ -6,7 +6,18 @@ import { ParseServer } from 'parse-server';
 import path from 'path';
 const __dirname = path.resolve();
 import http from 'http';
+import S3Adapter from '@parse/s3-files-adapter';
 
+
+//AWS Adapter
+var s3Options = {
+  "bucket": "catia-app",
+}
+
+var s3Adapter = new S3Adapter(s3Options);
+
+
+//SERVER CONFIGURATION
 export const config = {
   databaseURI:
     process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/dev',
@@ -14,6 +25,7 @@ export const config = {
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse', // Don't forget to change to https if needed
+  filesAdapter: s3Adapter,
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
   },
