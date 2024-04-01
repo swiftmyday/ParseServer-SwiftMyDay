@@ -19,7 +19,7 @@
       "required": true
     },
     "SERVER_URL": {
-      "description": "Your server URL. Just replace yourappname with the name of this server.",
+      "description": "Your server URL. Just replace yourappname with the name typed above in app-name",
       "value": "http://yourappname.herokuapp.com/parse",
       "required": true
     },
@@ -28,12 +28,13 @@
       "required": true
     },
     "AWS_ACCESS_KEY_ID": {
-      "description": "Your MongoDB database URI",
-      "required": true
+      "description": "Your AWS access key"
     },
     "AWS_SECRET_ACCESS_KEY": {
-      "description": "Your MongoDB database URI",
-      "required": true
+      "description": "Your AWS secret access key"
+    },
+    "BUCKET_NAME": {
+      "description": "Your S3 bucket name"
     }
   },
   "engines": {

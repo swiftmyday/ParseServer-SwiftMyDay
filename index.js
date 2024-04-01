@@ -1,6 +1,3 @@
-// Example express application adding the parse-server module to expose Parse
-// compatible API routes.
-
 import express from 'express';
 import { ParseServer } from 'parse-server';
 import path from 'path';
@@ -11,7 +8,7 @@ import S3Adapter from '@parse/s3-files-adapter';
 
 //AWS Adapter
 var s3Options = {
-  "bucket": "catia-app",
+  "bucket": process.env.BUCKET_NAME,
 }
 
 var s3Adapter = new S3Adapter(s3Options);
