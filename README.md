@@ -10,7 +10,7 @@ Thanks to [Parse Server](https://github.com/ParsePlatform/parse-server) for maki
 
 ## Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/swiftmyday/ParseServer-SwiftMyDay)
 
 Alternatively, to deploy manually:
 
