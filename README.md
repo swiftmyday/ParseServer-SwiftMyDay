@@ -5,6 +5,8 @@ Parse server forked by SwiftMyDay.
 Thanks to [Parse Server](https://github.com/ParsePlatform/parse-server) for making this possible.
 
 
+Documentation [Parse Docs](https://docs.parseplatform.org)
+
 
 # Remote Deployment
 
