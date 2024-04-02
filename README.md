@@ -18,7 +18,7 @@ Alternatively, to deploy manually:
 2. Clone this repo and change directoty to it
 3. Using terminal type `heroku login`
 4. Type `heroku create` to create an app in heroku
-5. Deploy your local code to heroky by typing `git push heroku master`
+5. Deploy your local code to heroku by typing `git push heroku master`
 
 
 # Local Development
@@ -32,7 +32,7 @@ To run the server on your local machine just follow these steps:
 5. Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with `Control-D`.
 6. Launch Parse Server with `npm start`. By default it will run on `localhost/parse`.
 
-Your Parse Server is not running and is connected to your local database named `dev` in which the data is stored that you manage via Parse Server.
+Your Parse Server is now running and is connected to your local database named `dev` in which the data is stored that you manage via Parse Server.
 
 [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
 [license-link]: LICENSE
