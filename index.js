@@ -27,6 +27,9 @@ export const config = {
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
   },
+  fileUpload: {
+  enabledForPublic: true // If true if file upload is enabled for anyone with access to the Parse Server file upload endpoint, regardless of user authentication. Default is false.
+}
 };
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
