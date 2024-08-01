@@ -1,0 +1,53 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+      {
+        "name": "swiftmyday-parse-server",
+        "image": "node:18",
+        "essential": true,
+        "memory": 512,
+        "portMappings": [
+          {
+            "containerPort": 1337,
+            "hostPort": 80
+          }
+        ],
+        "environment": [
+          {
+            "name": "PARSE_MOUNT",
+            "value": "/parse"
+          },
+          {
+            "name": "APP_ID",
+            "value": "YOUR_APP_ID"
+          },
+          {
+            "name": "MASTER_KEY",
+            "value": "YOUR_MASTER_KEY"
+          },
+          {
+            "name": "SERVER_URL",
+            "value": "http://YOUR_AWS_URL/parse"
+          },
+          {
+            "name": "DATABASE_URI",
+            "value": "YOUR_DATABASE_URI"
+          },
+          {
+            "name": "AWS_ACCESS_KEY_ID",
+            "value": "YOUR_AWS_ACCESS_KEY_ID"
+          },
+          {
+            "name": "AWS_SECRET_ACCESS_KEY",
+            "value": "YOUR_AWS_SECRET_ACCESS_KEY"
+          },
+          {
+            "name": "BUCKET_NAME",
+            "value": "YOUR_BUCKET_NAME"
+          }
+        ],
+        "command": ["node", "your-server-file.js"]
+      }
+    ]
+  }
+  
