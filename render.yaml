@@ -3,15 +3,15 @@ services:
     name: swiftmyday-parse-server
     env: node
     plan: free
-    buildCommand: 'npm install'
-    startCommand: 'npm start'
+    buildCommand: |
+      node generate-keys.js > .env
+      npm install
+    startCommand: |
+      source .env
+      npm start
     envVars:
       - key: PARSE_MOUNT
         value: "/parse"
-      - key: APP_ID
-        value: "YOUR_APP_ID"
-      - key: MASTER_KEY
-        value: "YOUR_MASTER_KEY"
       - key: SERVER_URL
         value: "http://your-render-app-url/parse"
       - key: DATABASE_URI
