@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: swiftmyday-parse-server
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node app.js'
+    envVars:
+      - key: PARSE_MOUNT
+        value: "/parse"
+      - key: APP_ID
+        value: "YOUR_APP_ID"
+      - key: MASTER_KEY
+        value: "YOUR_MASTER_KEY"
+      - key: SERVER_URL
+        value: "http://your-render-app-url/parse"
+      - key: DATABASE_URI
+        value: "YOUR_DATABASE_URI"
+      - key: AWS_ACCESS_KEY_ID
+        value: "YOUR_AWS_ACCESS_KEY_ID"
+      - key: AWS_SECRET_ACCESS_KEY
+        value: "YOUR_AWS_SECRET_ACCESS_KEY"
+      - key: BUCKET_NAME
+        value: "YOUR_BUCKET_NAME"
