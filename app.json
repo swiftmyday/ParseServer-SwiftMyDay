@@ -4,7 +4,11 @@
   "repository": "https://github.com/swiftmyday/ParseServer-SwiftMyDay",
   "logo": "https://swiftmyday.github.io/Deposit/Logo.png",
   "env": {
-    "PARSE_MOUNT": "/parse",
+    "PARSE_MOUNT": {
+      "description": "Configure Parse API route. (Do not change this value)",
+      "value": "/parse",
+      "required": true
+    },
     "APP_ID": {
       "description": "A unique identifier for your app.",
       "generator": "secret",
