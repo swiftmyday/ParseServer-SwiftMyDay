@@ -22,6 +22,7 @@ This open-source project offers you full control over your data and unparalleled
 - [x] **Cost-Effective**: Extremely cheap to maintain and scale.
 - [x] **Scalable**: Effortlessly scale as your application grows.
 - [x] **Extensible**: Add or modify features with ease using plugins and middleware.
+#
 
 <br></br>
 # Getting started ✅
@@ -40,8 +41,9 @@ Render offers a **free plan** for development. Friendly and simple UI.
 
 1. Click "Deploy to render" button
 2. Look for **Public Git repository** and paste this repo URL -> https://github.com/swiftmyday/ParseServer-SwiftMyDay
-3. You might be prompt to input a blueprint name which can be any name you want
-4. You will be prompt to input `DATABASE_URI`, `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, `BUCKET_NAME`. In order to get these values follow steps down below for AWS and MongoDB
+3. You might be required to input a blueprint name which can be any name you want
+4. You will be required to input `DATABASE_URI`. Follow the steps below in the Mongo DB database section
+5. You also will be required to input `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, `BUCKET_NAME`. Follow the steps below in Amazon Web Services (AWS) S3 bucket section to obtain all those values.
 6. Click deploy and your server will be up and running.
 7. Go to Dashboard > Click on your recently deployed server > Environment > and replace the `SERVER_URL` with your RenderURL/parse. Ex: https://swiftmyday-parse-server.onrender.com/parse
 
@@ -54,17 +56,36 @@ Heroku **does not offer a free plan** but the cheapest plan starts at $5.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/swiftmyday/ParseServer-SwiftMyDay)
 
-1. Create a Heroku account
-2. Click "Deploy to heroku" button
+1. Click "Deploy to heroku" button
+2. Create a Heroku account if you already don't have one, then go back and click again the "deploy to heroku" button.
 3. Fill the form
-4. You will be prompt to input `DATABASE_URI`, `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, `BUCKET_NAME`. In order to get these values follow steps down below for AWS and MongoDB
-5. Click deploy and your server will be up and running
-6. Go to Settings > copy the URL under domains next to "Your app can be found at"
-7. Click on **Reveal Config Vars** and replace the SERVER_URL with the url from step 6. Make sure the /parse is at the end of the URL. Ex: https://swiftmydayserver.herokuapp.com/Parse
+4. You will be required to input `DATABASE_URI`. Follow the steps below in the Mongo DB database section
+5. You also will be required to input `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, `BUCKET_NAME`. Follow the steps below in Amazon Web Services (AWS) S3 bucket section to obtain all those values.
+6. Click deploy and your server will be up and running
+7. Go to Settings > copy the URL under domains next to "Your app can be found at"
+8. Click on **Reveal Config Vars** and replace the SERVER_URL with the url from step 6. Make sure the /parse is at the end of the URL. Ex: https://swiftmydayserver.herokuapp.com/Parse
+
+
+<br></br>
+## Deploy your server locally 🖥️
+
+To run the server on your local machine just follow these steps:
+
+1. Make sure to have the latest Node js version installed [NodeJS](https://nodejs.org/en)
+2. Clone this repository and change directory to it.
+3. Run `npm install`.
+4. Install a MongoDB database locally. [Install MongoDB](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-os-x/)
+5. Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with `Control-D`.
+6. Launch Parse Server with `npm start`. By default it will run on `localhost/parse`.
+
+Your Parse Server is now running and is connected to your local database named `dev` in which the data is stored that you manage via Parse Server.
 
 ##
 <br></br>
-## Create and connect AWS
+# Databases
+
+<br></br>
+## Amazon Web Services (AWS) S3 Bucket
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"  width="80">
 
@@ -81,7 +102,7 @@ In order to obtain the `AWS_ACCESS_KEY_ID` and the `AWS_SECRET_ACCESS_KEY` follo
 9. Copy the **Access Key**(`AWS_ACCESS_KEY_ID`) and the **Secret Access Key** (`AWS_SECRET_ACCESS_KEY`)
 
 <br></br>
-## Create and connect Mongo DB database
+## Mongo DB database
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png"  width="180">
 
@@ -96,22 +117,6 @@ In order to obtain the `DATABASE_URI` follow these instructions:
 7. Click `connect`, then `drivers`
 8. Copy the URL from section No. 3 and close the popup.
 9. Paste the URL in your notes, and replace `<password>` with the password created in step 4
-
-##
-
-<br></br>
-# Deploy your server locally 🖥️
-
-To run the server on your local machine just follow these steps:
-
-1. Make sure to have the latest Node js version installed [NodeJS](https://nodejs.org/en)
-2. Clone this repository and change directory to it.
-3. Run `npm install`.
-4. Install a MongoDB database locally. [Install MongoDB](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-os-x/)
-5. Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with `Control-D`.
-6. Launch Parse Server with `npm start`. By default it will run on `localhost/parse`.
-
-Your Parse Server is now running and is connected to your local database named `dev` in which the data is stored that you manage via Parse Server.
 
 [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
 [license-link]: LICENSE
