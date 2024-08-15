@@ -4,7 +4,7 @@ import path from 'path';
 const __dirname = path.resolve();
 import http from 'http';
 import S3Adapter from '@parse/s3-files-adapter';
-
+import './config.js';
 
 //SERVER CONFIGURATION
 export const config = {
