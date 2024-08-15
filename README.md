@@ -71,14 +71,12 @@ Heroku **does not offer a free plan** but the cheapest plan starts at $5.
 
 To run the server on your local machine just follow these steps:
 
-1. Make sure to have the latest Node js version installed [NodeJS](https://nodejs.org/en)
-2. Clone this repository and change directory to it.
-3. Run `npm install`.
-4. Install a MongoDB database locally. [Install MongoDB](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-os-x/)
-5. Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with `Control-D`.
-6. Launch Parse Server with `npm start`. By default it will run on `localhost/parse`.
-
-Your Parse Server is now running and is connected to your local database named `dev` in which the data is stored that you manage via Parse Server.
+1. Make sure to have the latest Node js version installed [NodeJS](https://nodejs.org/en), along with **Homebrew** for MacOS [Homebrew](https://brew.sh) or **Chocolatey** for windows [Chocolatey](https://chocolatey.org/install)
+2. Open terminal and type `git clone https://github.com/swiftmyday/ParseServer-SwiftMyDay`
+3. Type `cd ParseServer-SwiftMyDay`.
+4. Type `npm run setup`
+5. You will be required to answer some questions in terminal. For full local server answer **N** to all. Otherwise you can connect your AWS S3 bucket and your MongoDB to your local parse server.
+6. Launch Parse Server with `npm start` and your will be provided with the URL of your server.
 
 ##
 <br></br>
