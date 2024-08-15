@@ -6,23 +6,13 @@ import http from 'http';
 import S3Adapter from '@parse/s3-files-adapter';
 
 
-//AWS Adapter
-var s3Options = {
-  "bucket": process.env.BUCKET_NAME,
-}
-
-var s3Adapter = new S3Adapter(s3Options);
-
-
 //SERVER CONFIGURATION
 export const config = {
-  databaseURI:
-    process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/dev',
+  databaseURI: process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse', // Don't forget to change to https if needed
-  filesAdapter: s3Adapter,
   masterKeyIps: ['0.0.0.0/0', '::/0'], //Ip filter disable. Add your ip address here for private access
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
@@ -32,6 +22,14 @@ export const config = {
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
+
+//Amazon Web Services (AWS)
+if(process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY){
+
+  const s3Adapter = new S3Adapter({ bucket: process.env.BUCKET_NAME }); //Initialize
+
+  config.filesAdapter = s3Adapter; //Assign to parse server configuration
+}
 
 export const app = express();
 
