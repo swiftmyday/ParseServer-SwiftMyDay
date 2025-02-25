@@ -1,0 +1,18 @@
+{
+   "compilerOptions": {
+      "module": "esnext",
+      "target": "es6", //esnext
+      "outDir": "./cloud/dist",
+      "rootDir": "./cloud",
+      "strict": true,
+      "allowJs": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "importHelpers": true,
+      "sourceMap": true,   // Allows to debug typescript code
+   },
+   "include": [
+      "cloud/**/*",
+      "cloud/global.d.ts"
+, "generate-accessors.ts"   ]
+}
