@@ -31,7 +31,8 @@
     "pdf-lib": "^1.17.1",
     "shippo": "^2.2.6",
     "ts-morph": "^23.0.0",
-    "winston": "^3.13.0"
+    "winston": "^3.13.0",
+    "typescript": "^5.4.5"
   },
   "type": "module",
   "devDependencies": {
@@ -51,8 +52,7 @@
     "nyc": "15.1.0",
     "prettier": "2.8.7",
     "semantic-release": "21.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "ts-node": "^10.9.2"
   },
   "engines": {
     "node": ">=16 <17 || >=18 <19"
